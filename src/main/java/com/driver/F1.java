@@ -4,16 +4,16 @@ public class F1 extends Car {
 
     // Constructor for F1, inheriting from Car
     public F1(String name, boolean isManual) {
-        super(name, 4, 2, 6, isManual, "F1", 2); // F1 has 4 wheels, 2 doors, 6 gears, and 2 seats
+        // F1 car has specific attributes, so pass values to the Car constructor
+        super(name, 4, 2, 6, isManual, "F1", 2); // 4 wheels, 2 doors, 6 gears, 2 seats
     }
 
-    // Method to accelerate the F1 car
     public void accelerate(int rate) {
         int newSpeed = getCurrentSpeed() + rate;
         
         // Adjust gear based on speed
         if (newSpeed == 0) {
-            changeGear(1); // Stop the car
+            changeGear(1); // Stop the car, set gear 1
         } else if (newSpeed >= 1 && newSpeed <= 50) {
             changeGear(1);
         } else if (newSpeed >= 51 && newSpeed <= 100) {
